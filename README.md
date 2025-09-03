@@ -1,5 +1,3 @@
-
-
 # COVID-19 Chest X-ray Classification using CNN
 
 ## Project Overview
@@ -24,8 +22,6 @@ Our approach uses a custom CNN trained on the **COVID-19 Radiography Dataset**, 
 
 ## Model Architecture
 The CNN was built using **TensorFlow/Keras** with the following layers:
-
-
 
 <pre style="white-space:pre;overflow-x:auto;line-height:normal;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
 ┃<span style="font-weight: bold"> Layer (type)                    </span>┃<span style="font-weight: bold"> Output Shape           </span>┃<span style="font-weight: bold">       Param # </span>┃
@@ -85,7 +81,16 @@ The confusion matrix below shows model predictions on the test set, highlighting
 | **Actual Normal** | 93.8%            | 6.2%            |
 | **Actual COVID**  | 10.4%            | 89.6%           |
 
+---
+
+## Grad-CAM Visualization
+To interpret the CNN’s predictions, **Grad-CAM (Gradient-weighted Class Activation Mapping)** was applied to highlight which regions of the chest X-ray contributed most to the model’s decision. This helps ensure that the model focuses on clinically relevant areas such as lung opacities.  
+
+### Sample Grad-CAM Output
+<img width="576" height="432" alt="gradcam visualization" src="PUT_YOUR_GRADCAM_IMAGE_URL_HERE" />
+
+---
+
 ## Conclusion
 
 This project demonstrates that a Convolutional Neural Network can effectively classify COVID-19 and Normal chest X-ray images with high accuracy (~94%). By successfully distinguishing between infected and healthy lungs, the model shows promise as a rapid screening tool. Key factors contributing to its performance include careful data preprocessing and balancing, which ensure robust results, and the ability of CNNs to capture complex features in medical images without manual feature extraction. While the model performs well on the current dataset, further validation on larger and more diverse datasets is necessary before clinical deployment. Overall, this study highlights the potential of deep learning in aiding early detection of COVID-19 and provides a foundation for developing more advanced medical imaging solutions.
-
